@@ -14,3 +14,16 @@ function getComputerChoice() {
 }
 
 console.log(getComputerChoice());
+
+function getHumanChoice() {
+  let choice = prompt("What's your choice?").toLowerCase();
+
+  if (choice === "rock" || choice === "paper" || choice === "scissors") {
+    return choice;
+  } else {
+    alert("Invalid choice! Please enter 'rock', 'paper', or'scissors'.");
+    return getHumanChoice();
+  }
+}
+
+console.log(getHumanChoice());
