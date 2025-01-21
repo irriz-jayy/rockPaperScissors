@@ -38,8 +38,18 @@ function playRound(humanChoice, computerChoice) {
     console.log("Its a tie");
   }
 
-  if (humanChoice === "rock" && computerChoice === "paper") {
+  if (
+    (humanChoice === "paper" && computerChoice === "rock") ||
+    (humanChoice === "scissors" && computerChoice === "paper") ||
+    (humanChoice === "rock" && computerChoice === "scissors")
+  ) {
+    humanScore++;
+    return "Human wins";
+  } else {
+    computerScore++;
+    return "Computer wins";
   }
 }
 
 console.log(playRound(humanChoice, computerChoice));
+console.log(humanScore, computerScore);
