@@ -12,8 +12,8 @@ function getComputerChoice() {
 
   return compChoice;
 }
-
-console.log(getComputerChoice());
+let computerChoice = getComputerChoice();
+console.log(computerChoice);
 
 function getHumanChoice() {
   let choice = prompt("What's your choice?").toLowerCase();
@@ -25,5 +25,21 @@ function getHumanChoice() {
     return getHumanChoice();
   }
 }
+let humanChoice = getHumanChoice();
+console.log(humanChoice);
+let humanScore = 0;
+let computerScore = 0;
 
-console.log(getHumanChoice());
+function playRound(humanChoice, computerChoice) {
+  console.log(`You chose ${humanChoice}`);
+  console.log(`Computer chose ${computerChoice}`);
+
+  if (humanChoice === computerChoice) {
+    console.log("Its a tie");
+  }
+
+  if (humanChoice === "rock" && computerChoice === "paper") {
+  }
+}
+
+console.log(playRound(humanChoice, computerChoice));
